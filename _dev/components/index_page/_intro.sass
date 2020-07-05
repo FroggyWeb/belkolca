@@ -1,0 +1,33 @@
+.intro
+  position: relative
+  display: flex
+  min-height: 700px
+  +r(xl)
+    background: url('../../img/bg-intro-sec.jpg') no-repeat -40% 100%
+  &__title
+    font-size: 24px
+  &__cnt-wrap
+    flex: 1
+  &__cnt
+    display: inline-flex
+    flex-direction: column
+    align-items: flex-start
+    padding-top: 60px
+    margin: 70px 0 auto 15%
+    position: relative
+    z-index: 1
+  &__znak
+    position: absolute
+    right: 0
+    top: 0
+  &__btn
+    margin-left: auto
+  &__img
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    img
+      max-width:  none
+      height: 100%
+      object-fit: content

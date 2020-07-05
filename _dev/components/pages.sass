@@ -1,0 +1,62 @@
+.page
+  display: flex
+  width: 100%
+  min-height: 100vh
+  flex-direction: column
+
+.page__content
+  flex: 1 0 auto
+
+.container
+  margin-left: auto
+  margin-right: auto
+  max-width: 1400px
+  padding-left: 20px
+  padding-right: 20px
+
+.section
+  padding: 4*$lg 0
+
+.spacer
+  margin-bottom: 6*$lg
+
+.row
+  +row()
+
+.navbar
+  background-color: rgba($c-main, .9)
+  padding: 20px 0
+  color: #fff
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+  &__logo
+    flex: 0 0 120px
+    margin-right: $lg
+    +rmax(md)
+      flex: 0 0 90px
+  &__slug
+    font-size: 12px
+    font-weight: bold
+    +rmax(md)
+      display: none
+  &__contact
+    margin: 0 auto
+    display: flex
+    align-items: center
+  &__tel
+    +rmax(sm)
+      display: none
+    +r(md)
+      font-size: 24px
+    margin-right: 20px
+  &__call
+    margin-left: 20px
+    +rmax(md)
+      display: none
+  &__work-time
+    +rmax(md)
+      display: none
+

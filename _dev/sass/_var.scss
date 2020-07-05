@@ -1,0 +1,52 @@
+$breakpoints: (
+  "xs": 360px,
+  "sm": 540px,
+  "md": 750px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+) !default;
+
+$f-base: 16px/1.4 "Roboto", sans-serif;
+$f-title: "Roboto", sans-serif;
+$f-color: #204478;
+
+$l-g: 15px;
+$lg: $l-g;
+
+$c-main: #2d3238;
+$c-brand: #fea724;
+$c-dop: #4c5b82;
+$c-sec: #a8e5ff;
+$c-light: #828282;
+$c-text: #000;
+$c-link: inherit;
+$c-active: inherit;
+
+// bootstrap setup
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  xxl: 1400px,
+);
+
+@include font("Roboto", "roboto-regular-webfont", 400);
+@include font("Roboto", "roboto-italic-webfont", 400, italic);
+@include font("Roboto", "roboto-bolditalic-webfont", 700, italic);
+@include font("Roboto", "roboto-bold-webfont", 700);
+@include font("Roboto", "roboto-black-webfont", 900);
+
+$hc-offcanvas-nav-trigger-width: 30px;
+$hc-offcanvas-nav-trigger-height: 26px;
+$hc-offcanvas-nav-trigger-line-width: 4px;
+$hc-offcanvas-nav-trigger-color: #fff;
+$hc-offcanvas-nav-trigger-transform-speed: 0.2s;
+$hc-offcanvas-nav-background-color: #336ca6;
+$hc-offcanvas-nav-text-color: #fff;

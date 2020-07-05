@@ -1,0 +1,14 @@
+nav.menu.menu--main
+  div(data-nav-custom-content).first-nav
+    .custom-content
+      a(href="#0") test
+  -
+    var menudata = [
+    {name : 'Практикум'},
+    {name : 'Отзывы'},
+    {name : 'Контакты', sub: [{
+      name : 'Контакты2', link: '#test'
+    }]}
+    ]
+  +menu()
+

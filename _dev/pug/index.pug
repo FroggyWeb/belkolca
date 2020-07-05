@@ -1,0 +1,121 @@
+extend ./part/_base
+block var
+  - var current = "Home";
+
+block content
+  // begin intro
+  .b-intro
+    .__cnt-wrap.container
+      .__cnt
+        h1.b-title.__title
+          span.__sub Производство и продажа <br>армированных
+          span.__big железобетонных <br>изделий
+        a.__btn.btn(href="#product-list")
+          span Посмотреть продукцию
+            +svgMono("arrow-hand")
+        img.__znak(src="../img/gost.svg" alt="ЖБИ кольца по ГОСТ")
+
+    .__img
+      picture
+        source(srcset="../img/intro-col-480.jpg" media="(max-width: 600px)")
+        img(src="../img/intro-col.jpg", alt="Производство колец ЖБИ")
+  // end intro
+
+  include ./part/about.pug
+
+  .b-quality
+    .container
+      .__wrap
+        .__cnt
+          h3.b-title.--section
+            span.__big Железобетонное качество<br>и надежность
+          p Вся наша продукция изготовливается в соответствии с <strong>ГОСТа 8020-68 (серия 3.900-3)</strong> из бетона <strong>марки 200</strong> и армирующей сетки внутри.
+          p Срок гарантии на нашу продукцию составляет <strong>3 года</strong> при сроке эксплуатиции <strong>более 30 лет</strong>.
+        .__img
+          img(src="../img/prod-quality.png", alt="Бетонные кольца")
+          a(href="#").fancybox.__img-sert
+            img(src="../img/sert_thumb.jpg", alt="")
+
+  include ./part/_form-order.pug
+
+
+  section.b-products.section
+    .b-product
+      .container
+        .__title
+          .__title-head
+            h2.b-title.--product
+              span.__big Кольца стеновЫе
+              span.__sub от производителя в Минске и минской области
+          .__desc
+            p Кольцо стеновое – это тип железобетонных изделий, которые активно применяются в строительстве трубопроводов, газовых магистралей, колодцев, оборудовании канализации частных домов и и т.д.
+            p Маркировка продукции осуществляется с применением буквенно-цифровых обозначений, согласно ГОСТу. Первая цифра, стоящая после букв - диаметр изделия. Вторая цифра - высоты элемента.
+        .__cnt
+          .__img
+            img(src="../img/content/prod-kolco.jpg", alt="Кольца стеновЫе")
+          .__items
+            include ./part/_product-ring.pug
+
+    .b-product
+      .container
+        .__title
+          .__title-head
+            h2.b-title.--product
+              span.__big Плиты перекрытий
+              span.__sub собственного производства
+          .__desc
+            p Плиты перекрытий используются при сооружения смотровых колодцев канализационных и водопроводных сетей для создания герметичности и зашиты колодца.
+        .__cnt
+          .__img
+            img(src="../img/content/prod-kolco.jpg", alt="Кольца стеновЫе")
+          .__items
+            include ./part/_product-cap.pug
+
+    .b-product
+      .container
+        .__title
+          .__title-head
+            h2.b-title.--product
+              span.__big Люки полимерные
+              span.__sub для колодцев и септиков
+          .__desc
+            p Купить плиты для колодцов в Минске
+        .__cnt
+          .__img
+            img(src="../img/content/prod-kolco.jpg", alt="Люки полимерные")
+          .__items
+            include ./part/_product-luk.pug
+
+  .b-faetures.--beton
+    .container
+      h3.title-small Преимущества использования колец из ЖБИ
+      .__items
+        .__item
+          .__icon.--check
+            +svgMono("check")
+          .__text Высокое качество по доступной цене
+        .__item
+          .__icon.--check
+            +svgMono("check")
+          .__text Широкий размерный ряд
+        .__item
+          .__icon.--check
+            +svgMono("check")
+          .__text Возможность быстро обустроить систему водопровода и канализации
+        .__item
+          .__icon.--check
+            +svgMono("check")
+          .__text Высокая герметичность
+        .__item
+          .__icon.--check
+            +svgMono("check")
+          .__text Жёсткость конструкции
+      .b-btn-wrap.--no-space
+        a(href="#").btn
+          +svgMono("word", "ico-left")
+          span Скачать прайс-лист
+
+  include ./part/_form-order.pug
+
+  include ./part/_septic
+

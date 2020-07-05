@@ -1,0 +1,74 @@
+.product
+  margin-bottom: 6*$lg
+  &:last-child
+    margin-bottom: 0
+  &__title
+    display: flex
+    flex-direction: column
+    margin-bottom: 2*$lg
+    +r(sm)
+      flex-direction: row
+  &__title-head
+    flex: 0 0 auto
+    +r(sm)
+      margin-right: $lg
+      width: +col-w(4/12)
+  &__desc
+    font-size: 14px
+
+  &__cnt
+    +row()
+  &__img
+    +col(4/12)
+  &__items
+    +col(8/12)
+    display: flex
+    flex-wrap: wrap
+
+.prod-item
+  +rmax("sm")
+    margin-bottom: 40px
+  +r(sm)
+    flex: 0 1 50%
+    &:nth-child(odd)
+      padding-right: 2*$lg
+  &__header
+    font-size: 18px
+    margin: 0
+    background-color: $c-main
+    color: #fff
+    font-weight: bold
+    padding: 1em
+    line-height: 1.2
+    min-height: 80px
+    display: inline-flex
+    align-items: center
+    width: 100%
+
+.prod-table
+  width: 100%
+  td,th
+    text-align: center
+    vertical-align: bottom
+    padding: 5px 2px
+    &:first-child
+      text-align: left
+  tr:nth-child(even)
+    background-color: #EAEAEA
+  td
+    border-bottom: 1px solid #B8B7B7
+  th
+    font-size: 12px
+    background-color: #C3D5DC
+
+  &__name
+    font-size: 1.1em
+    font-weight: bold
+    color: $c-dop
+
+  &__price
+    color: $c-dop
+    font-size: 22px
+    font-weight: 900
+    span
+      font-size: .7em
