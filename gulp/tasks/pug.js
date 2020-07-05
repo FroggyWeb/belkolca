@@ -18,6 +18,7 @@ const renderHtml = (onlyChanged) =>
     )
     .pipe(pug({ pretty: true, plugins: [pugbem] }))
     .pipe(replace(new RegExp("(../){2,}", "g"), "./"))
+    .pipe(replace("../", "./"))
     .pipe(gulp.dest(config.dest.html));
 
 const buildPug = () => renderHtml();
