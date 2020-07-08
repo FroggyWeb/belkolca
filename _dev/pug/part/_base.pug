@@ -55,15 +55,42 @@ html(lang="ru")
             .__nav
               .burger
                 span
-              include ../../components/nav/_nav.pug
+              nav.menu.menu--main
+                include ../../components/nav/_nav.pug
         // end navbar
 
         block content
 
 
-      footer.footer-page
-        p test include
-
+      footer.b-footer-page
+        .container
+          .__wrap
+            .__logo
+              a(href="/").logo
+                img(src="../../img/logo.svg", alt="Компания Varna")
+            .__address
+              div Адрес производства <br>Минский р-н. д. Аннополь.
+              div  Координаты: <br> 53.678387, 27.561147
+            .__tel
+              .b-tel
+                a.__link(href="tel:+375292589572")
+                  span.__code +375 29
+                  | 258 95 72
+                a(href="viber://chat?number=+375292589572").__msg
+                  .__icon.--viber
+                a(href="tg://resolve?domain=@froggyWeb").__msg
+                  .__icon.--telegramm
+              .b-tel
+                a.__link(href="tel:+375291062607")
+                  span.__code +375 29
+                  | 106 26 07
+                a(href="viber://chat?number=+375291062607").__msg
+                  .__icon.--viber
+                a(href="tg://resolve?domain=@froggyWeb").__msg
+                  .__icon.--telegramm
+            .__nav
+              +menu()
+            .__desc-warn Сайт не является интернет-магазином, информация о товарах и ценах носит ознакомительный характер.
 
 
   //- block form

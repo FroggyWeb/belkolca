@@ -6,6 +6,8 @@
 
 .page__content
   flex: 1 0 auto
+  overflow-x: hidden
+  overflow-y: auto
 
 .container
   margin-left: auto
@@ -60,3 +62,32 @@
     +rmax(md)
       display: none
 
+.footer-page
+  background-color: $c-main
+  color: #fff
+  padding: 20px 0
+  font-size: 14px
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+  &__logo
+    width: 90px
+    margin-right: 2*$lg
+  &__address
+    display: flex
+    div:not(first-child)
+      margin-left: 20px
+  &__tel
+    margin-left: auto
+  &__nav
+    flex: 0 0 100%
+    text-align: center
+    .menu__item
+      display: inline-block
+      margin: 20px 5px 10px 5px
+  &__desc-warn
+    flex: 0 0 100%
+    text-align: center
+    color: $c-brand
+    font-size: 12px
+    margin-top: 10px

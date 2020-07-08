@@ -2,9 +2,11 @@
   form.b-form.__form
     h3.__title Заказать стеновые кольца
     .__line
-      +label("Ваше имя", "order_name","text", 1, "Введите Ваше имя")
+      label Ваше имя
+      input(type="text" name="order_name" placeholder="Введите Ваше имя" required)
     .__line
-      +label("Контактный телефон", "order_tel", "phone", 1)
+      label Контактный телефон
+      input(type="phone" name="order_tel" required)
     .btn-wrap
       button.btn(type="submit")
         span Отправить заявку

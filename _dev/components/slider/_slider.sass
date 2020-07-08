@@ -3,6 +3,8 @@
   font-size: 0
   color: transparent
   background-color: transparent
+  background-repeat: no-repeat
+  background-position: center
   background-size: cover
   border: none
   padding: 0px
@@ -15,16 +17,121 @@
   z-index: 1
   outline: none
   cursor: pointer
+  transition: all .5s
 
 .slick-prev
   left: 0
-  background: url("../../img/arrow-prev.svg") no-repeat
+  background-image: url("../../img/arrow-prev.svg")
 .slick-next
   right: 0
-  background: url("../../img/arrow-next.svg") no-repeat
+  background-image: url("../../img/arrow-next.svg")
+
+.septic
+  &__wrap
+    +row
+  &__item
+    +r(md)
+      +col(1/2)
 
 .sept-count
+  width: 290px
+  margin: auto
+  border-radius: 60px
+  overflow: hidden
+  margin-bottom: 30px
+  &__item
+    justify-content: center
+    padding: 10px 40px
+    height: 50px
+    align-items: center
+    color: #fff
+    background-color: $c-main
+    .ico
+      font-size: 2em
+      margin-right: .5em
   .slick-arrow
     border-radius: 50%
     border: 2px solid $c-brand
-    background: #FFD185
+    background-color: #FFD185
+    width: 50px
+    height: 50px
+    background-size: 60%
+  .slick-disabled
+    opacity: .7
+  .slick-prev
+    background-image: url("../../img/minus.svg")
+  .slick-next
+    background-image: url("../../img/plus.svg")
+
+.slick-initialized .sept-count__item
+  display: flex
+
+.septic-desc
+  text-align: center
+  &__title
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 30px
+  &__desc
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+  &__desc-item
+    margin: 0 10px
+    text-transform: uppercase
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+  &__desc-item-title
+    font-size: 14px
+    font-weight: bold
+
+  &__desc-item-param
+    margin-top: 10px
+    color: $c-dop
+    font-weight: 900
+    font-size: 32px
+    span
+      font-size: .6em
+
+.septic-img
+  &__item
+    text-align: center
+    img
+      margin: auto
+      height: 400px
+      max-width: none
+
+.photo-gall
+  margin-bottom: 4*$lg
+  &__wrap
+    margin: 0 -10px
+  .slick-slide
+    display: grid !important
+    grid-template-rows: 250px 150px
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-row-gap: 20px
+    // grid-gap: 20px
+    +r(sm)
+      max-width: 50%
+      grid-template-rows: 150px 150px
+    & > div
+      padding: 0 10px
+      +rmax(sm)
+        grid-column-end: span 2
+      &:first-child
+        grid-column-end: span 3
+        +r(sm)
+          grid-column-end: span 3
+          grid-row-end: span 2
+  &__item
+    display: inline !important
+    user-select: none
+
+  img
+    object-fit: cover
+    max-width: none
+    width: 100%
+    height: 100%
+
+

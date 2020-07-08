@@ -1,14 +1,11 @@
-nav.menu.menu--main
-  div(data-nav-custom-content).first-nav
-    .custom-content
-      a(href="#0") test
-  -
-    var menudata = [
-    {name : 'Практикум'},
-    {name : 'Отзывы'},
-    {name : 'Контакты', sub: [{
-      name : 'Контакты2', link: '#test'
-    }]}
-    ]
-  +menu()
+-
+  var menudata = [
+  {name : 'О компании', link: "#about"},
+  {name : 'Продукция', link: "#product"},
+  {name : 'Качество', link: "#quality"},
+  {name : 'Комплектация септиков', link: "#septic"},
+  {name : 'Фотогалерея', link: "#about"},
+  {name : 'Контакты', link: "#contact"},
+  ]
++menu()
 
