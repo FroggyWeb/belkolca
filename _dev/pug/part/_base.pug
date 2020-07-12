@@ -31,63 +31,56 @@ html(lang="ru")
                 img(src="../../img/logo.svg", alt="Компания БетВайс")
             .__slug Производство и поставка<br> армированных <br>железобетонных издели
             .__contact
-              .__tel
+              .__tel.tel-wrap
                 .b-tel
-                  a.__link(href="tel:+375292589572")
+                  a.__item(href="tel:+375292589572")
                     span.__code +375 29
                     | 258 95 72
-                  a(href="viber://chat?number=+375292589572").__msg
-                    .__icon.--viber
-                  a(href="tg://resolve?domain=@froggyWeb").__msg
-                    .__icon.--telegramm
-                .b-tel
-                  a.__link(href="tel:+375291062607")
+                  a.__item(href="tel:+375291062607")
                     span.__code +375 29
                     | 106 26 07
-                  a(href="viber://chat?number=+375291062607").__msg
+                .b-tel-msg.__tel-msg
+                  a(href="viber://chat?number=+375292589572").__item
                     .__icon.--viber
-                  a(href="tg://resolve?domain=@froggyWeb").__msg
+                  a(href="tg://resolve?domain=@froggyWeb").__item
                     .__icon.--telegramm
               .__work-time ВРЕМЯ РАБОТЫ: <br>с 8.00-19.00 <br>понедельник - пятница
               a.__call.btn(href="#call-me")
                 span Заказать звонок
                   +svgMono("tel")
             .__nav
-              .burger
+              .burger#burger
                 span
-              nav.menu.menu--main
+              nav.menu.menu--main#main-nav
                 include ../../components/nav/_nav.pug
         // end navbar
-
-        block content
+        .page-overflow
+          block content
 
 
       footer.b-footer-page
         .container
           .__wrap
             .__logo
-              a(href="/").logo
+              a(href="/" ).logo
                 img(src="../../img/logo.svg", alt="Компания Varna")
             .__address
               div Адрес производства <br>Минский р-н. д. Аннополь.
               div  Координаты: <br> 53.678387, 27.561147
-            .__tel
+            .__tel.tel-wrap
               .b-tel
-                a.__link(href="tel:+375292589572")
+                a.__item(href="tel:+375292589572")
                   span.__code +375 29
                   | 258 95 72
-                a(href="viber://chat?number=+375292589572").__msg
-                  .__icon.--viber
-                a(href="tg://resolve?domain=@froggyWeb").__msg
-                  .__icon.--telegramm
-              .b-tel
-                a.__link(href="tel:+375291062607")
+                a.__item(href="tel:+375291062607")
                   span.__code +375 29
                   | 106 26 07
-                a(href="viber://chat?number=+375291062607").__msg
+              .b-tel-msg.__tel-msg
+                a(href="viber://chat?number=+375292589572").__item
                   .__icon.--viber
-                a(href="tg://resolve?domain=@froggyWeb").__msg
+                a(href="tg://resolve?domain=@froggyWeb").__item
                   .__icon.--telegramm
+
             .__nav
               +menu()
             .__desc-warn Сайт не является интернет-магазином, информация о товарах и ценах носит ознакомительный характер.

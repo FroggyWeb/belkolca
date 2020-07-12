@@ -5,15 +5,16 @@ block var
 block content
   // begin intro
   .b-intro
-    .__cnt-wrap.container
-      .__cnt
-        h1.b-title.__title
-          span.__sub Производство и продажа <br>армированных
-          span.__big железобетонных <br>изделий
-        a.__btn.btn(href="#product-list")
-          span Посмотреть продукцию
-            +svgMono("arrow-hand")
-        img.__znak(src="../img/gost.svg" alt="ЖБИ кольца по ГОСТ")
+    .container
+      .__cnt-wrap
+        .__cnt
+          h1.b-title.__title
+            span.__sub Производство и продажа <br>армированных
+            span.__big железобетонных <br>изделий
+          a.__btn.btn(href="#product-list")
+            span Посмотреть продукцию
+              +svgMono("arrow-hand")
+          img.__znak(src="../img/gost.svg" alt="ЖБИ кольца по ГОСТ")
 
     .__img
       picture
@@ -23,7 +24,7 @@ block content
 
   include ./part/about.pug
 
-  .b-quality
+  .b-quality#quality
     .container
       .__wrap
         .__cnt
@@ -39,7 +40,7 @@ block content
   include ./part/_form-order.pug
 
 
-  section.b-products.section
+  section.b-products.section#product
     .b-product
       .container
         .__title
@@ -89,7 +90,7 @@ block content
   .b-faetures.--beton
     .container
       h3.title-small Преимущества использования колец из ЖБИ
-      .__items
+      .__items.js-features
         .__item
           .__icon.--check
             +svgMono("check")
@@ -110,7 +111,7 @@ block content
           .__icon.--check
             +svgMono("check")
           .__text Жёсткость конструкции
-      .b-btn-wrap.--no-space
+      .b-btn-wrap
         a(href="#").btn
           +svgMono("word", "ico-left")
           span Скачать прайс-лист
@@ -119,7 +120,7 @@ block content
 
   include ./part/_septic
 
-  .b-photo-gall
+  .b-photo-gall#photogall
     .container
       h2.b-title.--product
         span.__big Фотогалерея
@@ -137,10 +138,10 @@ block content
       a.__item.fancy-gall(href="../img/content/photogall/pr-3.jpg" data-fancybox="Gallery")
         img(src="./img/content/photogall/pr-3.jpg" alt="")
 
-  .b-map
+  .b-map#contact
     .container
       h2.b-title.--product
         span.__big Контакты
-      .__wrap
-        | <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A18c826e8a2038b2beb58d25682400cb1f564d9ac8df55834b90c0b1996b39534&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    .yc
+      //- | <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A18c826e8a2038b2beb58d25682400cb1f564d9ac8df55834b90c0b1996b39534&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 

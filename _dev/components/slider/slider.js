@@ -7,6 +7,28 @@ $(".sept-count").slick({
   infinite: false,
 });
 
+const featuewsSetting = {
+  rows: 0,
+  mobileFirst: true,
+  slidesToShow: 1,
+  infinite: false,
+  ariableWidth: true,
+  responsive: [
+    {
+      breakpoint: 560,
+      settings: "unslick",
+    },
+  ],
+};
+
+const featureSl = $(".js-features").slick(featuewsSetting);
+
+$(window).on("resize", function () {
+  if ($(window).width() < 560 && !featureSl.hasClass("slick-initialized")) {
+    featureSl.slick(featuewsSetting);
+  }
+});
+
 $(".septic-desc").slick({
   asNavFor: ".sept-count, .septic-img",
   rows: 0,
@@ -25,7 +47,16 @@ $(".septic-img").slick({
 });
 
 $(".photo-gall__wrap").slick({
+  accessibility: false,
   rows: 3,
   slidesToShow: 2,
   lazyLoad: "ondemand",
+  responsive: [
+    {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });

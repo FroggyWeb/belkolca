@@ -24,13 +24,11 @@
             <div class="navbar__logo"><a href="/"><img src="./img/logo.svg" alt="Компания БетВайс"></a></div>
             <div class="navbar__slug">Производство и поставка<br> армированных <br>железобетонных издели</div>
             <div class="navbar__contact">
-              <div class="navbar__tel">
-                <div class="tel"><a class="tel__link" href="tel:+375292589572"><span class="tel__code">+375 29</span>258 95 72</a><a class="tel__msg" href="viber://chat?number=+375292589572">
-                    <div class="tel__icon tel__icon--viber"></div></a><a class="tel__msg" href="tg://resolve?domain=@froggyWeb">
-                    <div class="tel__icon tel__icon--telegramm"></div></a></div>
-                <div class="tel"><a class="tel__link" href="tel:+375291062607"><span class="tel__code">+375 29</span>106 26 07</a><a class="tel__msg" href="viber://chat?number=+375291062607">
-                    <div class="tel__icon tel__icon--viber"></div></a><a class="tel__msg" href="tg://resolve?domain=@froggyWeb">
-                    <div class="tel__icon tel__icon--telegramm"></div></a></div>
+              <div class="navbar__tel tel-wrap">
+                <div class="tel"><a class="tel__item" href="tel:+375292589572"><span class="tel__code">+375 29</span>258 95 72</a><a class="tel__item" href="tel:+375291062607"><span class="tel__code">+375 29</span>106 26 07</a></div>
+                <div class="tel-msg navbar__tel-msg"><a class="tel-msg__item" href="viber://chat?number=+375292589572">
+                    <div class="tel-msg__icon tel-msg__icon--viber"></div></a><a class="tel-msg__item" href="tg://resolve?domain=@froggyWeb">
+                    <div class="tel-msg__icon tel-msg__icon--telegramm"></div></a></div>
               </div>
               <div class="navbar__work-time">ВРЕМЯ РАБОТЫ: <br>с 8.00-19.00 <br>понедельник - пятница</div><a class="navbar__call btn" href="#call-me"><span>Заказать звонок
                   <svg class="ico ico-mono-tel">
@@ -38,8 +36,8 @@
                   </svg></span></a>
             </div>
             <div class="navbar__nav">
-              <div class="burger"><span></span></div>
-              <nav class="menu menu--main">
+              <div class="burger" id="burger"><span></span></div>
+              <nav class="menu menu--main" id="main-nav">
                 <ul class="menu__list">
                   <li class="menu__item"><a class="menu__link" href="#about">О компании</a>
                   </li>
@@ -49,7 +47,7 @@
                   </li>
                   <li class="menu__item"><a class="menu__link" href="#septic">Комплектация септиков</a>
                   </li>
-                  <li class="menu__item"><a class="menu__link" href="#about">Фотогалерея</a>
+                  <li class="menu__item"><a class="menu__link" href="#photogall">Фотогалерея</a>
                   </li>
                   <li class="menu__item"><a class="menu__link" href="#contact">Контакты</a>
                   </li>
@@ -59,42 +57,44 @@
           </div>
         </div>
         <!-- end navbar-->
-        <!-- begin intro-->
-        <div class="intro">
-          <div class="intro__cnt-wrap container">
-            <div class="intro__cnt">
-              <h1 class="title intro__title"><span class="title__sub">Производство и продажа <br>армированных</span><span class="title__big">железобетонных <br>изделий</span></h1><a class="intro__btn btn" href="#product-list"><span>Посмотреть продукцию
-                  <svg class="ico ico-mono-arrow-hand">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                  </svg></span></a><img class="intro__znak" src="./img/gost.svg" alt="ЖБИ кольца по ГОСТ">
-            </div>
-          </div>
-          <div class="intro__img">
-            <picture>
-              <source srcset="./img/intro-col-480.jpg" media="(max-width: 600px)"><img src="./img/intro-col.jpg" alt="Производство колец ЖБИ">
-            </picture>
-          </div>
-        </div>
-        <!-- end intro-->
-        <section class="about section">
-          <div class="container">
-            <div class="about__wrap">
-              <h2 class="title title--section"><span class="title__big">Собственное производство</span><span class="title__sub">колец из бетона и плит перекрытий для колодцев</span></h2>
-              <div class="about-company spacer">
-                <div class="people about-company__people"><img class="people__photo" src="./img/content/ceo.jpg" alt="Александр Кураш">
-                  <div class="people__name">Александр Кураш</div>
-                  <div class="people__position">руководитель VERNA</div>
-                </div>
-                <div class="about-company__txt">
-                  <p>Специализацией VERNA является изготовление и поставка колец, плит из высококачественного бетона, для оборудования колодцев и септиков. Собственное производство позволяет контролировать качество и осуществлять поставку продукции в день заказа.</p>
-                  <p>Команда VERNA имеет более 20-летний опыт работы с бетоном. Мы уверены в нашей продукции, гарантия на все изделия составляет 3 года.</p>
-                  <p>Готовы оказать профессиональную помощь и консультации по всем возникающим вопросам.</p>
+        <div class="page-overflow">
+          <!-- begin intro-->
+          <div class="intro">
+            <div class="container">
+              <div class="intro__cnt-wrap">
+                <div class="intro__cnt">
+                  <h1 class="title intro__title"><span class="title__sub">Производство и продажа <br>армированных</span><span class="title__big">железобетонных <br>изделий</span></h1><a class="intro__btn btn" href="#product-list"><span>Посмотреть продукцию
+                      <svg class="ico ico-mono-arrow-hand">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                      </svg></span></a><img class="intro__znak" src="./img/gost.svg" alt="ЖБИ кольца по ГОСТ">
                 </div>
               </div>
-              <h3 class="title-small">Преимущества работы с нашей компанией</h3>
-              <div class="faetures">
-                <div class="container">
-                  <div class="faetures__items">
+            </div>
+            <div class="intro__img">
+              <picture>
+                <source srcset="./img/intro-col-480.jpg" media="(max-width: 600px)"><img src="./img/intro-col.jpg" alt="Производство колец ЖБИ">
+              </picture>
+            </div>
+          </div>
+          <!-- end intro-->
+          <section class="about section" id="about">
+            <div class="container">
+              <div class="about__wrap">
+                <h2 class="title title--section"><span class="title__big">Собственное производство</span><span class="title__sub">колец из бетона и плит перекрытий для колодцев</span></h2>
+                <div class="about-company spacer">
+                  <div class="people about-company__people"><img class="people__photo" src="./img/content/ceo.jpg" alt="Александр Кураш">
+                    <div class="people__name">Александр Кураш</div>
+                    <div class="people__position">руководитель VERNA</div>
+                  </div>
+                  <div class="about-company__txt">
+                    <p>Специализацией VERNA является изготовление и поставка колец, плит из высококачественного бетона, для оборудования колодцев и септиков. Собственное производство позволяет контролировать качество и осуществлять поставку продукции в день заказа.</p>
+                    <p>Команда VERNA имеет более 20-летний опыт работы с бетоном. Мы уверены в нашей продукции, гарантия на все изделия составляет 3 года.</p>
+                    <p>Готовы оказать профессиональную помощь и консультации по всем возникающим вопросам.</p>
+                  </div>
+                </div>
+                <h3 class="title-small">Преимущества работы с нашей компанией</h3>
+                <div class="faetures">
+                  <div class="faetures__items js-features">
                     <div class="faetures__item">
                       <div class="faetures__icon">
                         <svg class="ico ico-mono-hand">
@@ -155,489 +155,489 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <div class="quality">
-          <div class="container">
-            <div class="quality__wrap">
-              <div class="quality__cnt">
-                <h3 class="title title--section"><span class="title__big">Железобетонное качество<br>и надежность</span></h3>
-                <p>Вся наша продукция изготовливается в соответствии с <strong>ГОСТа 8020-68 (серия 3.900-3)</strong> из бетона <strong>марки 200</strong> и армирующей сетки внутри.</p>
-                <p>Срок гарантии на нашу продукцию составляет <strong>3 года</strong> при сроке эксплуатиции <strong>более 30 лет</strong>.</p>
-              </div>
-              <div class="quality__img"><img src="./img/prod-quality.png" alt="Бетонные кольца"><a class="fancybox quality__img-sert" href="#"><img src="./img/sert_thumb.jpg" alt=""></a></div>
-            </div>
-          </div>
-        </div>
-        <div class="form-order">
-          <form class="form form-order__form">
-            <h3 class="form__title">Заказать стеновые кольца</h3>
-            <div class="form__line">
-              <label>Ваше имя</label>
-              <input type="text" name="order_name" placeholder="Введите Ваше имя" required>
-            </div>
-            <div class="form__line">
-              <label>Контактный телефон</label>
-              <input type="phone" name="order_tel" required>
-            </div>
-            <div class="btn-wrap">
-              <button class="btn" type="submit"><span>Отправить заявку
-                  <svg class="ico ico-mono-arrow-hand">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                  </svg></span></button>
-            </div>
-          </form>
-        </div>
-        <section class="products section">
-          <div class="product">
+          </section>
+          <div class="quality" id="quality">
             <div class="container">
-              <div class="product__title">
-                <div class="product__title-head">
-                  <h2 class="title title--product"><span class="title__big">Кольца стеновЫе</span><span class="title__sub">от производителя в Минске и минской области</span></h2>
+              <div class="quality__wrap">
+                <div class="quality__cnt">
+                  <h3 class="title title--section"><span class="title__big">Железобетонное качество<br>и надежность</span></h3>
+                  <p>Вся наша продукция изготовливается в соответствии с <strong>ГОСТа 8020-68 (серия 3.900-3)</strong> из бетона <strong>марки 200</strong> и армирующей сетки внутри.</p>
+                  <p>Срок гарантии на нашу продукцию составляет <strong>3 года</strong> при сроке эксплуатиции <strong>более 30 лет</strong>.</p>
                 </div>
-                <div class="product__desc">
-                  <p>Кольцо стеновое – это тип железобетонных изделий, которые активно применяются в строительстве трубопроводов, газовых магистралей, колодцев, оборудовании канализации частных домов и и т.д.</p>
-                  <p>Маркировка продукции осуществляется с применением буквенно-цифровых обозначений, согласно ГОСТу. Первая цифра, стоящая после букв - диаметр изделия. Вторая цифра - высоты элемента.</p>
-                </div>
-              </div>
-              <div class="product__cnt">
-                <div class="product__img"><img src="./img/content/prod-kolco.jpg" alt="Кольца стеновЫе"></div>
-                <div class="product__items">
-                  <div class="prod-item __item">
-                    <h3 class="prod-item__header">Кольцо стеновое замковое (с четвертью/фасками)</h3>
-                    <table class="prod-table prod-item__table">
-                      <tr>
-                        <th>Наименование<br>габариты, мм</th>
-                        <th>Вес, кг</th>
-                        <th>Стоимость</th>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-7-3.png">КС-7-3<br></a>
-                          <p>700х300х70</p>
-                        </td>
-                        <td>130</td>
-                        <td class="prod-table__price">30 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-7-6.png">КС-7-6<br></a>
-                          <p>700х600х70</p>
-                        </td>
-                        <td>250</td>
-                        <td class="prod-table__price">40 <span> руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-7-9.png">КС-7-9<br></a>
-                          <p>700х900х70</p>
-                        </td>
-                        <td>380</td>
-                        <td class="prod-table__price">50<span> руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-10-9.png">КС-10-9<br></a>
-                          <p>1000х900х80</p>
-                        </td>
-                        <td>600</td>
-                        <td class="prod-table__price">65<span> руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-15-9.png">КС-15-9<br></a>
-                          <p>1500х900х90</p>
-                        </td>
-                        <td>1000</td>
-                        <td class="prod-table__price">100<span> руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-20-9.png">КС-20-9<br></a>
-                          <p>2000х900х100</p>
-                        </td>
-                        <td>1470</td>
-                        <td class="prod-table__price">160<span> руб</span></td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="prod-item __item">
-                    <h3 class="prod-item__header">Кольцо стеновое с дном</h3>
-                    <table class="prod-table prod-item__table">
-                      <tr>
-                        <th>Наименование<br>габариты, мм</th>
-                        <th>Вес, кг</th>
-                        <th>Стоимость</th>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ksd-7-3.png">КСД-15-9<br></a>
-                          <p>1500х900х90</p>
-                        </td>
-                        <td>1600</td>
-                        <td class="prod-table__price">190 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_ksd-20-9.png">КСД-20-9<br></a>
-                          <p>2000х900х100</p>
-                        </td>
-                        <td>2600</td>
-                        <td class="prod-table__price">320 <span>руб</span></td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="btn-wrap"><a class="btn fancybox" href="#getorder"><span>Купить стеновые кольца
-                        <svg class="ico ico-mono-arrow-hand">
-                          <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                        </svg></span></a></div>
-                </div>
+                <div class="quality__img"><img src="./img/prod-quality.png" alt="Бетонные кольца"><a class="fancybox quality__img-sert" href="#"><img src="./img/sert_thumb.jpg" alt=""></a></div>
               </div>
             </div>
           </div>
-          <div class="product">
+          <div class="form-order">
+            <form class="form form-order__form">
+              <h3 class="form__title">Заказать стеновые кольца</h3>
+              <div class="form__line">
+                <label>Ваше имя</label>
+                <input type="text" name="order_name" placeholder="Введите Ваше имя" required>
+              </div>
+              <div class="form__line">
+                <label>Контактный телефон</label>
+                <input type="phone" name="order_tel" required>
+              </div>
+              <div class="btn-wrap">
+                <button class="btn" type="submit"><span>Отправить заявку
+                    <svg class="ico ico-mono-arrow-hand">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                    </svg></span></button>
+              </div>
+            </form>
+          </div>
+          <section class="products section" id="product">
+            <div class="product">
+              <div class="container">
+                <div class="product__title">
+                  <div class="product__title-head">
+                    <h2 class="title title--product"><span class="title__big">Кольца стеновЫе</span><span class="title__sub">от производителя в Минске и минской области</span></h2>
+                  </div>
+                  <div class="product__desc">
+                    <p>Кольцо стеновое – это тип железобетонных изделий, которые активно применяются в строительстве трубопроводов, газовых магистралей, колодцев, оборудовании канализации частных домов и и т.д.</p>
+                    <p>Маркировка продукции осуществляется с применением буквенно-цифровых обозначений, согласно ГОСТу. Первая цифра, стоящая после букв - диаметр изделия. Вторая цифра - высоты элемента.</p>
+                  </div>
+                </div>
+                <div class="product__cnt">
+                  <div class="product__img"><img src="./img/content/prod-kolco.jpg" alt="Кольца стеновЫе"></div>
+                  <div class="product__items">
+                    <div class="prod-item __item">
+                      <h3 class="prod-item__header">Кольцо стеновое замковое (с четвертью/фасками)</h3>
+                      <table class="prod-table prod-item__table">
+                        <tr>
+                          <th>Наименование<br>габариты, мм</th>
+                          <th>Вес, кг</th>
+                          <th>Стоимость</th>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-7-3.png">КС-7-3<br></a>
+                            <p>700х300х70</p>
+                          </td>
+                          <td>130</td>
+                          <td class="prod-table__price">30 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-7-6.png">КС-7-6<br></a>
+                            <p>700х600х70</p>
+                          </td>
+                          <td>250</td>
+                          <td class="prod-table__price">40 <span> руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-7-9.png">КС-7-9<br></a>
+                            <p>700х900х70</p>
+                          </td>
+                          <td>380</td>
+                          <td class="prod-table__price">50<span> руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-10-9.png">КС-10-9<br></a>
+                            <p>1000х900х80</p>
+                          </td>
+                          <td>600</td>
+                          <td class="prod-table__price">65<span> руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-15-9.png">КС-15-9<br></a>
+                            <p>1500х900х90</p>
+                          </td>
+                          <td>1000</td>
+                          <td class="prod-table__price">100<span> руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ks-20-9.png">КС-20-9<br></a>
+                            <p>2000х900х100</p>
+                          </td>
+                          <td>1470</td>
+                          <td class="prod-table__price">160<span> руб</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="prod-item __item">
+                      <h3 class="prod-item__header">Кольцо стеновое с дном</h3>
+                      <table class="prod-table prod-item__table">
+                        <tr>
+                          <th>Наименование<br>габариты, мм</th>
+                          <th>Вес, кг</th>
+                          <th>Стоимость</th>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ksd-7-3.png">КСД-15-9<br></a>
+                            <p>1500х900х90</p>
+                          </td>
+                          <td>1600</td>
+                          <td class="prod-table__price">190 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_ksd-20-9.png">КСД-20-9<br></a>
+                            <p>2000х900х100</p>
+                          </td>
+                          <td>2600</td>
+                          <td class="prod-table__price">320 <span>руб</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="btn-wrap"><a class="btn fancybox" href="#getorder"><span>Купить стеновые кольца
+                          <svg class="ico ico-mono-arrow-hand">
+                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <div class="container">
+                <div class="product__title">
+                  <div class="product__title-head">
+                    <h2 class="title title--product"><span class="title__big">Плиты перекрытий</span><span class="title__sub">собственного производства</span></h2>
+                  </div>
+                  <div class="product__desc">
+                    <p>Плиты перекрытий используются при сооружения смотровых колодцев канализационных и водопроводных сетей для создания герметичности и зашиты колодца.</p>
+                  </div>
+                </div>
+                <div class="product__cnt">
+                  <div class="product__img"><img src="./img/content/prod-kolco.jpg" alt="Кольца стеновЫе"></div>
+                  <div class="product__items">
+                    <div class="prod-item __item">
+                      <h3 class="prod-item__header">Плита перекрытия (крышка)</h3>
+                      <table class="prod-table prod-item__table">
+                        <tr>
+                          <th>Наименование<br>диаметр х толщина, мм</th>
+                          <th>Вес, кг</th>
+                          <th>Стоимость</th>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_pp-10-1.png">ПП-10-1<br></a>
+                            <p>1160х150</p>
+                          </td>
+                          <td>250</td>
+                          <td class="prod-table__price">50 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_pp-15-1.png">ПП-15-1<br></a>
+                            <p>1680х150</p>
+                          </td>
+                          <td>700</td>
+                          <td class="prod-table__price">100 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_pp-20-1.png">ПП-20-1<br></a>
+                            <p>2200х150</p>
+                          </td>
+                          <td>1280</td>
+                          <td class="prod-table__price">160 <span>руб</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="prod-item __item">
+                      <h3 class="prod-item__header">Плита низа (дно)</h3>
+                      <table class="prod-table prod-item__table">
+                        <tr>
+                          <th>Наименование<br>диаметр х толщина, мм</th>
+                          <th>Вес, кг</th>
+                          <th>Стоимость</th>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_pn-10-1.png">ПН-10-1	<br></a>
+                            <p>1160х150</p>
+                          </td>
+                          <td>400</td>
+                          <td class="prod-table__price">50 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_pn-15-1.png">ПН-15-1<br></a>
+                            <p>1680х150</p>
+                          </td>
+                          <td>950</td>
+                          <td class="prod-table__price">100 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_pn-20-1.png">ПН-20-1<br></a>
+                            <p>2200х150</p>
+                          </td>
+                          <td>1280</td>
+                          <td class="prod-table__price">1450 <span>руб</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="btn-wrap"><a class="btn fancybox" href="#getorder"><span>Купить плиты для колодцов
+                          <svg class="ico ico-mono-arrow-hand">
+                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <div class="container">
+                <div class="product__title">
+                  <div class="product__title-head">
+                    <h2 class="title title--product"><span class="title__big">Люки полимерные</span><span class="title__sub">для колодцев и септиков</span></h2>
+                  </div>
+                  <div class="product__desc">
+                    <p>Купить плиты для колодцов в Минске</p>
+                  </div>
+                </div>
+                <div class="product__cnt">
+                  <div class="product__img"><img src="./img/content/prod-kolco.jpg" alt="Люки полимерные"></div>
+                  <div class="product__items">
+                    <div class="prod-item __item">
+                      <h3 class="prod-item__header">Люки полимерные</h3>
+                      <table class="prod-table prod-item__table">
+                        <tr>
+                          <th>Наименование<br>диаметр, мм</th>
+                          <th>Вес, кг</th>
+                          <th>Стоимость</th>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_lp-15.png">ЛП 1.5<br></a>
+                            <p>750</p>
+                          </td>
+                          <td>23</td>
+                          <td class="prod-table__price">40 <span>руб</span></td>
+                        </tr>
+                        <tr>
+                          <td><a class="fancybox prod-table__name" href="./img/content/gost_lp-30.png">ЛП 3.0<br></a>
+                            <p>750</p>
+                          </td>
+                          <td>42</td>
+                          <td class="prod-table__price">50 <span>руб</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="btn-wrap"><a class="btn fancybox" href="#getorder"><span>Купить плиты для колодцов
+                          <svg class="ico ico-mono-arrow-hand">
+                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="faetures faetures--beton">
             <div class="container">
-              <div class="product__title">
-                <div class="product__title-head">
-                  <h2 class="title title--product"><span class="title__big">Плиты перекрытий</span><span class="title__sub">собственного производства</span></h2>
+              <h3 class="title-small">Преимущества использования колец из ЖБИ</h3>
+              <div class="faetures__items js-features">
+                <div class="faetures__item">
+                  <div class="faetures__icon faetures__icon--check">
+                    <svg class="ico ico-mono-check">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
+                    </svg>
+                  </div>
+                  <div class="faetures__text">Высокое качество по доступной цене</div>
                 </div>
-                <div class="product__desc">
-                  <p>Плиты перекрытий используются при сооружения смотровых колодцев канализационных и водопроводных сетей для создания герметичности и зашиты колодца.</p>
+                <div class="faetures__item">
+                  <div class="faetures__icon faetures__icon--check">
+                    <svg class="ico ico-mono-check">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
+                    </svg>
+                  </div>
+                  <div class="faetures__text">Широкий размерный ряд</div>
+                </div>
+                <div class="faetures__item">
+                  <div class="faetures__icon faetures__icon--check">
+                    <svg class="ico ico-mono-check">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
+                    </svg>
+                  </div>
+                  <div class="faetures__text">Возможность быстро обустроить систему водопровода и канализации</div>
+                </div>
+                <div class="faetures__item">
+                  <div class="faetures__icon faetures__icon--check">
+                    <svg class="ico ico-mono-check">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
+                    </svg>
+                  </div>
+                  <div class="faetures__text">Высокая герметичность</div>
+                </div>
+                <div class="faetures__item">
+                  <div class="faetures__icon faetures__icon--check">
+                    <svg class="ico ico-mono-check">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
+                    </svg>
+                  </div>
+                  <div class="faetures__text">Жёсткость конструкции</div>
                 </div>
               </div>
-              <div class="product__cnt">
-                <div class="product__img"><img src="./img/content/prod-kolco.jpg" alt="Кольца стеновЫе"></div>
-                <div class="product__items">
-                  <div class="prod-item __item">
-                    <h3 class="prod-item__header">Плита перекрытия (крышка)</h3>
-                    <table class="prod-table prod-item__table">
-                      <tr>
-                        <th>Наименование<br>диаметр х толщина, мм</th>
-                        <th>Вес, кг</th>
-                        <th>Стоимость</th>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_pp-10-1.png">ПП-10-1<br></a>
-                          <p>1160х150</p>
-                        </td>
-                        <td>250</td>
-                        <td class="prod-table__price">50 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_pp-15-1.png">ПП-15-1<br></a>
-                          <p>1680х150</p>
-                        </td>
-                        <td>700</td>
-                        <td class="prod-table__price">100 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_pp-20-1.png">ПП-20-1<br></a>
-                          <p>2200х150</p>
-                        </td>
-                        <td>1280</td>
-                        <td class="prod-table__price">160 <span>руб</span></td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="prod-item __item">
-                    <h3 class="prod-item__header">Плита низа (дно)</h3>
-                    <table class="prod-table prod-item__table">
-                      <tr>
-                        <th>Наименование<br>диаметр х толщина, мм</th>
-                        <th>Вес, кг</th>
-                        <th>Стоимость</th>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_pn-10-1.png">ПН-10-1	<br></a>
-                          <p>1160х150</p>
-                        </td>
-                        <td>400</td>
-                        <td class="prod-table__price">50 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_pn-15-1.png">ПН-15-1<br></a>
-                          <p>1680х150</p>
-                        </td>
-                        <td>950</td>
-                        <td class="prod-table__price">100 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_pn-20-1.png">ПН-20-1<br></a>
-                          <p>2200х150</p>
-                        </td>
-                        <td>1280</td>
-                        <td class="prod-table__price">1450 <span>руб</span></td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="btn-wrap"><a class="btn fancybox" href="#getorder"><span>Купить плиты для колодцов
-                        <svg class="ico ico-mono-arrow-hand">
-                          <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                        </svg></span></a></div>
-                </div>
-              </div>
+              <div class="btn-wrap"><a class="btn" href="#">
+                  <svg class="ico ico-mono-word ico-left">
+                    <use xlink:href="img/sprite-mono.svg#ico-mono-word"></use>
+                  </svg><span>Скачать прайс-лист</span></a></div>
             </div>
           </div>
-          <div class="product">
+          <div class="form-order">
+            <form class="form form-order__form">
+              <h3 class="form__title">Заказать стеновые кольца</h3>
+              <div class="form__line">
+                <label>Ваше имя</label>
+                <input type="text" name="order_name" placeholder="Введите Ваше имя" required>
+              </div>
+              <div class="form__line">
+                <label>Контактный телефон</label>
+                <input type="phone" name="order_tel" required>
+              </div>
+              <div class="btn-wrap">
+                <button class="btn" type="submit"><span>Отправить заявку
+                    <svg class="ico ico-mono-arrow-hand">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                    </svg></span></button>
+              </div>
+            </form>
+          </div>
+          <section class="septic section" id="septic">
             <div class="container">
-              <div class="product__title">
-                <div class="product__title-head">
-                  <h2 class="title title--product"><span class="title__big">Люки полимерные</span><span class="title__sub">для колодцев и септиков</span></h2>
-                </div>
-                <div class="product__desc">
-                  <p>Купить плиты для колодцов в Минске</p>
-                </div>
-              </div>
-              <div class="product__cnt">
-                <div class="product__img"><img src="./img/content/prod-kolco.jpg" alt="Люки полимерные"></div>
-                <div class="product__items">
-                  <div class="prod-item __item">
-                    <h3 class="prod-item__header">Люки полимерные</h3>
-                    <table class="prod-table prod-item__table">
-                      <tr>
-                        <th>Наименование<br>диаметр, мм</th>
-                        <th>Вес, кг</th>
-                        <th>Стоимость</th>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_lp-15.png">ЛП 1.5<br></a>
-                          <p>750</p>
-                        </td>
-                        <td>23</td>
-                        <td class="prod-table__price">40 <span>руб</span></td>
-                      </tr>
-                      <tr>
-                        <td><a class="fancybox prod-table__name" href="./img/content/gost_lp-30.png">ЛП 3.0<br></a>
-                          <p>750</p>
-                        </td>
-                        <td>42</td>
-                        <td class="prod-table__price">50 <span>руб</span></td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="btn-wrap"><a class="btn fancybox" href="#getorder"><span>Купить плиты для колодцов
-                        <svg class="ico ico-mono-arrow-hand">
-                          <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                        </svg></span></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="faetures faetures--beton">
-          <div class="container">
-            <h3 class="title-small">Преимущества использования колец из ЖБИ</h3>
-            <div class="faetures__items">
-              <div class="faetures__item">
-                <div class="faetures__icon faetures__icon--check">
-                  <svg class="ico ico-mono-check">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
-                  </svg>
-                </div>
-                <div class="faetures__text">Высокое качество по доступной цене</div>
-              </div>
-              <div class="faetures__item">
-                <div class="faetures__icon faetures__icon--check">
-                  <svg class="ico ico-mono-check">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
-                  </svg>
-                </div>
-                <div class="faetures__text">Широкий размерный ряд</div>
-              </div>
-              <div class="faetures__item">
-                <div class="faetures__icon faetures__icon--check">
-                  <svg class="ico ico-mono-check">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
-                  </svg>
-                </div>
-                <div class="faetures__text">Возможность быстро обустроить систему водопровода и канализации</div>
-              </div>
-              <div class="faetures__item">
-                <div class="faetures__icon faetures__icon--check">
-                  <svg class="ico ico-mono-check">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
-                  </svg>
-                </div>
-                <div class="faetures__text">Высокая герметичность</div>
-              </div>
-              <div class="faetures__item">
-                <div class="faetures__icon faetures__icon--check">
-                  <svg class="ico ico-mono-check">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-check"></use>
-                  </svg>
-                </div>
-                <div class="faetures__text">Жёсткость конструкции</div>
-              </div>
-            </div>
-            <div class="btn-wrap btn-wrap--no-space"><a class="btn" href="#">
-                <svg class="ico ico-mono-word ico-left">
-                  <use xlink:href="img/sprite-mono.svg#ico-mono-word"></use>
-                </svg><span>Скачать прайс-лист</span></a></div>
-          </div>
-        </div>
-        <div class="form-order">
-          <form class="form form-order__form">
-            <h3 class="form__title">Заказать стеновые кольца</h3>
-            <div class="form__line">
-              <label>Ваше имя</label>
-              <input type="text" name="order_name" placeholder="Введите Ваше имя" required>
-            </div>
-            <div class="form__line">
-              <label>Контактный телефон</label>
-              <input type="phone" name="order_tel" required>
-            </div>
-            <div class="btn-wrap">
-              <button class="btn" type="submit"><span>Отправить заявку
-                  <svg class="ico ico-mono-arrow-hand">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                  </svg></span></button>
-            </div>
-          </form>
-        </div>
-        <section class="septic section">
-          <div class="container">
-            <h2 class="title title--product"><span class="title__big">Комплектация септиков</span><span class="title__sub">примеры бетонных септиков</span></h2>
-            <h3 class="title-small title-small--color">Cтандартные схемы септиков</h3>
-            <div class="septic__wrap">
-              <div class="septic__item">
-                <div class="sept-count">
-                  <div class="sept-count__item">
-                    <svg class="ico ico-mono-user">
-                      <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
-                    </svg>До 4 человек
-                  </div>
-                  <div class="sept-count__item">
-                    <svg class="ico ico-mono-user">
-                      <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
-                    </svg>До 5 человек
-                  </div>
-                  <div class="sept-count__item">
-                    <svg class="ico ico-mono-user">
-                      <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
-                    </svg>До 6 человек
-                  </div>
-                  <div class="sept-count__item">
-                    <svg class="ico ico-mono-user">
-                      <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
-                    </svg>До 10 человек
-                  </div>
-                </div>
-                <div class="septic-desc">
-                  <div class="septic-desc__item">
-                    <div class="septic-desc__title">Однокамерный септик <br> (до 4 человек)</div>
-                    <div class="septic-desc__desc">
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Объем</div>
-                        <div class="septic-desc__desc-item-param">4 <span>куб. м</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
-                        <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
-                        <div class="septic-desc__desc-item-param">580 <span>руб</span></div>
-                      </div>
+              <h2 class="title title--product"><span class="title__big">Комплектация септиков</span><span class="title__sub">примеры бетонных септиков</span></h2>
+              <h3 class="title-small title-small--color">Cтандартные схемы септиков</h3>
+              <div class="septic__wrap">
+                <div class="septic__item">
+                  <div class="sept-count">
+                    <div class="sept-count__item">
+                      <svg class="ico ico-mono-user">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
+                      </svg>До 4 человек
                     </div>
-                    <div class="btn-wrap"><a class="septic-desc__btn btn" href="#get-order"><span>заказать
-                          <svg class="ico ico-mono-arrow-hand">
-                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                          </svg></span></a></div>
-                  </div>
-                  <div class="septic-desc__item">
-                    <div class="septic-desc__title">Однокамерный септик <br> (до 5 человек)</div>
-                    <div class="septic-desc__desc">
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Объем</div>
-                        <div class="septic-desc__desc-item-param">5,7 <span>куб. м</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
-                        <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
-                        <div class="septic-desc__desc-item-param">650 <span>руб</span></div>
-                      </div>
+                    <div class="sept-count__item">
+                      <svg class="ico ico-mono-user">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
+                      </svg>До 5 человек
                     </div>
-                    <div class="btn-wrap"><a class="btn-wrap__btn btn" href="#get-order"><span>заказать
-                          <svg class="ico ico-mono-arrow-hand">
-                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                          </svg></span></a></div>
-                  </div>
-                  <div class="septic-desc__item">
-                    <div class="septic-desc__title">Двухкамерный септик <br> (до 6 человек)</div>
-                    <div class="septic-desc__desc">
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Объем</div>
-                        <div class="septic-desc__desc-item-param">6,3 <span>куб. м</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
-                        <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
-                        <div class="septic-desc__desc-item-param">740 <span>руб</span></div>
-                      </div>
+                    <div class="sept-count__item">
+                      <svg class="ico ico-mono-user">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
+                      </svg>До 6 человек
                     </div>
-                    <div class="btn-wrap"><a class="septic-desc__btn btn" href="#get-order"><span>заказать
-                          <svg class="ico ico-mono-arrow-hand">
-                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                          </svg></span></a></div>
-                  </div>
-                  <div class="septic-desc__item">
-                    <div class="septic-desc__title">Двухкамерный септик <br> (до 10 человек)</div>
-                    <div class="septic-desc__desc">
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Объем</div>
-                        <div class="septic-desc__desc-item-param">14,1 <span>куб. м</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
-                        <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
-                      </div>
-                      <div class="septic-desc__desc-item">
-                        <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
-                        <div class="septic-desc__desc-item-param">1600 <span>руб</span></div>
-                      </div>
+                    <div class="sept-count__item">
+                      <svg class="ico ico-mono-user">
+                        <use xlink:href="img/sprite-mono.svg#ico-mono-user"></use>
+                      </svg>До 10 человек
                     </div>
-                    <div class="btn-wrap"><a class="septic-desc__btn btn" href="#get-order"><span>заказать
-                          <svg class="ico ico-mono-arrow-hand">
-                            <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
-                          </svg></span></a></div>
+                  </div>
+                  <div class="septic-desc">
+                    <div class="septic-desc__item">
+                      <div class="septic-desc__title">Однокамерный септик <br> (до 4 человек)</div>
+                      <div class="septic-desc__desc">
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Объем</div>
+                          <div class="septic-desc__desc-item-param">4 <span>куб. м</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
+                          <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
+                          <div class="septic-desc__desc-item-param">580 <span>руб</span></div>
+                        </div>
+                      </div>
+                      <div class="btn-wrap"><a class="septic-desc__btn btn" href="#get-order"><span>заказать
+                            <svg class="ico ico-mono-arrow-hand">
+                              <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                            </svg></span></a></div>
+                    </div>
+                    <div class="septic-desc__item">
+                      <div class="septic-desc__title">Однокамерный септик <br> (до 5 человек)</div>
+                      <div class="septic-desc__desc">
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Объем</div>
+                          <div class="septic-desc__desc-item-param">5,7 <span>куб. м</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
+                          <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
+                          <div class="septic-desc__desc-item-param">650 <span>руб</span></div>
+                        </div>
+                      </div>
+                      <div class="btn-wrap"><a class="btn-wrap__btn btn" href="#get-order"><span>заказать
+                            <svg class="ico ico-mono-arrow-hand">
+                              <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                            </svg></span></a></div>
+                    </div>
+                    <div class="septic-desc__item">
+                      <div class="septic-desc__title">Двухкамерный септик <br> (до 6 человек)</div>
+                      <div class="septic-desc__desc">
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Объем</div>
+                          <div class="septic-desc__desc-item-param">6,3 <span>куб. м</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
+                          <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
+                          <div class="septic-desc__desc-item-param">740 <span>руб</span></div>
+                        </div>
+                      </div>
+                      <div class="btn-wrap"><a class="septic-desc__btn btn" href="#get-order"><span>заказать
+                            <svg class="ico ico-mono-arrow-hand">
+                              <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                            </svg></span></a></div>
+                    </div>
+                    <div class="septic-desc__item">
+                      <div class="septic-desc__title">Двухкамерный септик <br> (до 10 человек)</div>
+                      <div class="septic-desc__desc">
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Объем</div>
+                          <div class="septic-desc__desc-item-param">14,1 <span>куб. м</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Срок<br> эксплуатации</div>
+                          <div class="septic-desc__desc-item-param">30 <span>лет</span></div>
+                        </div>
+                        <div class="septic-desc__desc-item">
+                          <div class="septic-desc__desc-item-title">Стоимость<br> комплектующих</div>
+                          <div class="septic-desc__desc-item-param">1600 <span>руб</span></div>
+                        </div>
+                      </div>
+                      <div class="btn-wrap"><a class="septic-desc__btn btn" href="#get-order"><span>заказать
+                            <svg class="ico ico-mono-arrow-hand">
+                              <use xlink:href="img/sprite-mono.svg#ico-mono-arrow-hand"></use>
+                            </svg></span></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="septic__item">
+                  <div class="septic-img">
+                    <div class="septic-img__item"><img src="./img/content/septic-4.png" alt="Пример септика для 4 человек"></div>
+                    <div class="septic-img__item"><img src="./img/content/septic-5.png" alt="Пример септика для 5 человек"></div>
+                    <div class="septic-img__item"><img src="./img/content/septic-6.png" alt="Пример септика для 6 человек"></div>
+                    <div class="septic-img__item"><img src="./img/content/septic-10.png" alt="Пример септика для 10 человек"></div>
                   </div>
                 </div>
               </div>
-              <div class="septic__item">
-                <div class="septic-img">
-                  <div class="septic-img__item"><img src="./img/content/septic-4.png" alt="Пример септика для 4 человек"></div>
-                  <div class="septic-img__item"><img src="./img/content/septic-5.png" alt="Пример септика для 5 человек"></div>
-                  <div class="septic-img__item"><img src="./img/content/septic-6.png" alt="Пример септика для 6 человек"></div>
-                  <div class="septic-img__item"><img src="./img/content/septic-10.png" alt="Пример септика для 10 человек"></div>
-                </div>
-              </div>
+              <div class="icon-links septic__links"><a class="icon-link" href="#" target="_blanc">
+                  <div class="icon-link__icon">
+                    <svg class="ico ico-mono-calc-light">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-calc-light"></use>
+                    </svg>
+                  </div>Как расчитать обьем септика</a><a class="icon-link" href="#" target="_blanc">
+                  <div class="icon-link__icon">
+                    <svg class="ico ico-mono-compare">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-compare"></use>
+                    </svg>
+                  </div>Как выбрать кольца</a><a class="icon-link" href="#" target="_blanc">
+                  <div class="icon-link__icon">
+                    <svg class="ico ico-mono-video">
+                      <use xlink:href="img/sprite-mono.svg#ico-mono-video"></use>
+                    </svg>
+                  </div>Видео по монтажу</a></div>
             </div>
-            <div class="icon-links septic__links"><a class="icon-link" href="#" target="_blanc">
-                <div class="icon-link__icon">
-                  <svg class="ico ico-mono-calc-light">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-calc-light"></use>
-                  </svg>
-                </div>Как расчитать обьем септика</a><a class="icon-link" href="#" target="_blanc">
-                <div class="icon-link__icon">
-                  <svg class="ico ico-mono-compare">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-compare"></use>
-                  </svg>
-                </div>Как выбрать кольца</a><a class="icon-link" href="#" target="_blanc">
-                <div class="icon-link__icon">
-                  <svg class="ico ico-mono-video">
-                    <use xlink:href="img/sprite-mono.svg#ico-mono-video"></use>
-                  </svg>
-                </div>Видео по монтажу</a></div>
+          </section>
+          <div class="photo-gall" id="photogall">
+            <div class="container">
+              <h2 class="title title--product"><span class="title__big">Фотогалерея</span></h2>
+            </div>
+            <div class="photo-gall__wrap"><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-1.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-1.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-2.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-2.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-3.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-3.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-1.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-1.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-2.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-2.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-3.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-3.jpg" alt=""></a></div>
           </div>
-        </section>
-        <div class="photo-gall">
-          <div class="container">
-            <h2 class="title title--product"><span class="title__big">Фотогалерея</span></h2>
-          </div>
-          <div class="photo-gall__wrap"><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-1.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-1.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-2.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-2.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-3.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-3.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-1.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-1.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-2.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-2.jpg" alt=""></a><a class="photo-gall__item fancy-gall" href="./img/content/photogall/pr-3.jpg" data-fancybox="Gallery"><img src="./img/content/photogall/pr-3.jpg" alt=""></a></div>
-        </div>
-        <div class="map">
-          <div class="container">
-            <h2 class="title title--product"><span class="title__big">Контакты</span></h2>
-            <div class="map__wrap"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A25a8e47140a20f4e1edcc168a5c64cee0d657b2b141d977e2b5e4b596139c95a&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script></div>
+          <div class="map" id="contact">
+            <div class="container">
+              <h2 class="title title--product"><span class="title__big">Контакты</span></h2>
+            </div>
+            <div class="yc"></div>
           </div>
         </div>
       </div>
@@ -649,13 +649,11 @@
               <div>Адрес производства <br>Минский р-н. д. Аннополь.</div>
               <div> Координаты: <br> 53.678387, 27.561147</div>
             </div>
-            <div class="footer-page__tel">
-              <div class="tel"><a class="tel__link" href="tel:+375292589572"><span class="tel__code">+375 29</span>258 95 72</a><a class="tel__msg" href="viber://chat?number=+375292589572">
-                  <div class="tel__icon tel__icon--viber"></div></a><a class="tel__msg" href="tg://resolve?domain=@froggyWeb">
-                  <div class="tel__icon tel__icon--telegramm"></div></a></div>
-              <div class="tel"><a class="tel__link" href="tel:+375291062607"><span class="tel__code">+375 29</span>106 26 07</a><a class="tel__msg" href="viber://chat?number=+375291062607">
-                  <div class="tel__icon tel__icon--viber"></div></a><a class="tel__msg" href="tg://resolve?domain=@froggyWeb">
-                  <div class="tel__icon tel__icon--telegramm"></div></a></div>
+            <div class="footer-page__tel tel-wrap">
+              <div class="tel"><a class="tel__item" href="tel:+375292589572"><span class="tel__code">+375 29</span>258 95 72</a><a class="tel__item" href="tel:+375291062607"><span class="tel__code">+375 29</span>106 26 07</a></div>
+              <div class="tel-msg footer-page__tel-msg"><a class="tel-msg__item" href="viber://chat?number=+375292589572">
+                  <div class="tel-msg__icon tel-msg__icon--viber"></div></a><a class="tel-msg__item" href="tg://resolve?domain=@froggyWeb">
+                  <div class="tel-msg__icon tel-msg__icon--telegramm"></div></a></div>
             </div>
             <div class="footer-page__nav">
               <ul class="menu__list">
@@ -667,7 +665,7 @@
                 </li>
                 <li class="menu__item"><a class="menu__link" href="#septic">Комплектация септиков</a>
                 </li>
-                <li class="menu__item"><a class="menu__link" href="#about">Фотогалерея</a>
+                <li class="menu__item"><a class="menu__link" href="#photogall">Фотогалерея</a>
                 </li>
                 <li class="menu__item"><a class="menu__link" href="#contact">Контакты</a>
                 </li>

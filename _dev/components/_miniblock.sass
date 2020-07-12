@@ -1,7 +1,9 @@
-.tel
+.tel-wrap
   display: flex
   align-items: center
-  &__link
+.tel
+  &__item
+    display: block
     text-decoration: none
     color: inherit
     font-weight: bold
@@ -9,22 +11,30 @@
   &__code
     font-size: .7em
     margin-right: .5em
+
+.tel-msg
   &__msg
     display: flex
     align-items: center
     justify-content: center
     position: relative
     text-decoration: none
-    margin-left: 10px
-    width: 1.2em
-    height: 1.2em
+  &__item
     background-color: #fff
     border-radius: 50%
-  &__icon
+    width: 2em
+    height: 2em
     display: inline-block
+    text-decoration: none
+    margin-left: 1em
+    transition: all .2s
+    &:hover
+      box-shadow: 0 0 10px $c-brand
+      transform: scale(1.2)
+  &__icon
+    background-size: cover
     width: 100%
     height: 100%
-    background-size: cover
 
     &--viber
       background-image: url("../img/icon/viber.svg")
@@ -43,6 +53,10 @@
     text-align: center
     margin: 0 $lg 40px
     flex: 0 0 200px
+    max-width: 80%
+    // +rmax(sm)
+    //   margin: 0 10px 20px
+    //   flex: 0 0 90px
   &__icon
     font-size: 3.5em
     color: $c-dop
@@ -59,10 +73,17 @@
   padding: 60px 0
   &__wrap
     display: flex
+    +rmax(md)
+      flex-direction: column
   &__cnt
     margin-right: +col-w(1/12)
   &__img
     position: relative
+    flex: 1 0 50%
+    max-width: 100%
+    img
+      max-width: none
+
   &__img-sert
     position: absolute
     left: 50%
@@ -70,9 +91,9 @@
     transform: translate(-50%, 0)
     width: 120px
     transition: all .2s
-    transform-origin: 50% 0
+    transform-origin: 50% 100%
     &:hover
-      width: 140px
+      transform: translate(-50%, 0) scale(1.2)
 
 .form-order
   background: linear-gradient(90deg, transparent 00%,  rgba(#fff,.5) 30%, rgba(#fff,.5) 70%, transparent 80%), url("../img/bg-kolca.jpg") no-repeat
@@ -89,6 +110,7 @@
 .icon-links
   display: flex
   justify-content: center
+  flex-wrap: wrap
 
 .icon-link
   margin: 0 20px 20px
@@ -105,3 +127,73 @@
     font-size: 3em
     text-align: center
     color: $c-brand
+
+.septic-desc
+  text-align: center
+  &__title
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 30px
+  &__desc
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+  &__desc-item
+    margin: 0 10px
+    text-transform: uppercase
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+  &__desc-item-title
+    font-size: 14px
+    font-weight: bold
+
+  &__desc-item-param
+    margin-top: 10px
+    color: $c-dop
+    font-weight: 900
+    font-size: 32px
+    span
+      font-size: .6em
+
+.septic-img
+  &__item
+    text-align: center
+    img
+      margin: auto
+      height: 400px
+      width: 100%
+      max-width: none
+      object-fit: contain
+
+.photo-gall
+  margin-bottom: 4*$lg
+  &__wrap
+    margin: 0 -10px
+  .slick-slide
+    display: grid !important
+    grid-template-rows: 250px 150px
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-row-gap: 20px
+    // grid-gap: 20px
+    +r(md)
+      max-width: 50%
+      grid-template-rows: 150px 150px
+    & > div
+      padding: 0 10px
+      +rmax(md)
+        grid-column-end: span 2
+      &:first-child
+        grid-column-end: span 3
+        grid-row-end: span 2
+        +rmax(md)
+          grid-column-end: span 4
+  &__item
+    display: inline !important
+    user-select: none
+
+  img
+    object-fit: cover
+    max-width: none
+    width: 100%
+    height: 100%

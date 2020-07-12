@@ -1,6 +1,10 @@
-.about
+.about#about
+  background-image: url('../../img/bg-liquid.jpg'), url("../../img/br-triangle.svg")
+  background-repeat: no-repeat
+  background-position: top left, bottom right
   &__wrap
-    margin-left: col-w(3/12)
+    +r(xl)
+      margin-left: col-w(3/12)
 
 .people
   text-align: center
@@ -15,15 +19,22 @@
   padding: $lg 0
   border-width: 2px 0
   display: flex
+  +rmax(sm)
+    flex-direction: column
   &__people
     flex-shrink: 0
     margin-right: 60px
+    margin-bottom: 30px
+    +rmax(sm)
+      align-self: flex-start
   &__txt
-    font-size: 20px
+    font-size: 14px
     font-weight: bold
     font-style: italic
-    line-height: 1.8
     color: #494848
     padding-left: 50px
     background: url("../../img/quote.svg") no-repeat top left
+    +r(md)
+      line-height: 1.8
+      font-size: 20px
 
