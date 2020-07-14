@@ -6,7 +6,7 @@ block var
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title dev
+    title Кольца из бетонв. Собственное производствл
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel="icon" href="favicon.ico" type="image/x-icon")
@@ -42,10 +42,10 @@ html(lang="ru")
                 .b-tel-msg.__tel-msg
                   a(href="viber://chat?number=+375292589572").__item
                     .__icon.--viber
-                  a(href="tg://resolve?domain=@froggyWeb").__item
+                  a(href="tg://resolve?domain=betonkolca").__item
                     .__icon.--telegramm
               .__work-time ВРЕМЯ РАБОТЫ: <br>с 8.00-19.00 <br>понедельник - пятница
-              a.__call.btn(href="#call-me")
+              a.__call.btn.fancyform(href="#getcall")
                 span Заказать звонок
                   +svgMono("tel")
             .__nav
@@ -78,7 +78,7 @@ html(lang="ru")
               .b-tel-msg.__tel-msg
                 a(href="viber://chat?number=+375292589572").__item
                   .__icon.--viber
-                a(href="tg://resolve?domain=@froggyWeb").__item
+                a(href="tg://resolve?domain=betonkolca").__item
                   .__icon.--telegramm
 
             .__nav
@@ -87,6 +87,52 @@ html(lang="ru")
 
 
   //- block form
+  form.b-form.modal#getcall(acion="")
+    h3.__title Заказать звонок
+    input(type="hidden" value="Заказ звонка" name="order_type")
+    .__line
+      label Ваше имя
+      input(type="text" name="order_name" placeholder="Введите Ваше имя" required)
+    .__line
+      label Контактный телефон
+      input(type="tel" name="order_tel" required)
+    .btn-wrap
+      button.btn(type="submit")
+        span Перезвоните мне
+          +svgMono("arrow-hand")
+
+  form.b-form.modal#getorder(acion="")
+    h3.__title Заказать стеновые кольца
+    input(type="hidden" value="Стеновые кольца" name="order_type")
+    .__line
+      label Ваше имя
+      input(type="text" name="order_name" placeholder="Введите Ваше имя" required)
+    .__line
+      label Контактный телефон
+      input(type="tel" name="order_tel" required)
+    .btn-wrap
+      button.btn(type="submit")
+        span Отправить заявку
+          +svgMono("arrow-hand")
+
+  form.b-form.modal#getseptic(acion="")
+    h3.__title Заказать комплектующие для септика
+    input(type="hidden" value="Септик" name="order_type")
+    .__line.form-col
+        label Количесво человек
+        input(type='number' name="order_peoplecount")
+    .__line
+      label Ваше имя
+      input(type="text" name="order_name" placeholder="Введите Ваше имя" required)
+    .__line
+      label Контактный телефон
+      input(type="tel" name="order_tel" required)
+    .btn-wrap
+      button.btn(type="submit")
+        span Отправить заявку
+          +svgMono("arrow-hand")
+
+
 
   //- script(src='js/vendors/jquery-3.4.1.min.js')
   script(src='js/main.js')

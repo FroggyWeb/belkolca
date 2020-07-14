@@ -42,8 +42,7 @@ $(window).on("resize", function () {
 });
 
 //тфм ещ зфпу
-$('a[href*="#"]').on("click", function (e) {
-  console.log("help");
+$('a[href*="#"]:not(".fancyform")').on("click", function (e) {
   let target = this.hash;
   let $target = $(target);
   if ($target.length) {

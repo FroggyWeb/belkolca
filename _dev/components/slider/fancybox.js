@@ -6,3 +6,5 @@ $(".fancy-gall").fancybox({
     axis: "x",
   },
 });
+
+$(".fancybox").fancybox({});
